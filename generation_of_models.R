@@ -89,14 +89,9 @@ dati0<- read_rdump("modello48_DP.R")
 model0_DP<-stan(file="recurrent_DP.stan",data=dati0, chains=2, seed=134889,iter=30000,warmup=15000,thin=2,verbose = TRUE,control=list(adapt_delta=0.99))
 
 #generating the model with the spline con ord 2 ind 1 (lineare)
-dati6 <- read_rdump("modello48_splineok.R)
+dati6 <- read_rdump("modello48_splineok.R")
 model_spline <- stan(file= "recurrent_spline.stan", dati=dati6, chains=2, iter= 15000, warmup=5000)  
 #vedendo che molte iterazioni divergevano abbiamo provato a compilarlo nel seguente modo:
 #model_spline2<-stan(file="recurrent_spline1.stan",data=dati6, chains=2, seed=134889,iter=30000,warmup=15000,thin=2,verbose = TRUE,control=list(adapt_delta=0.99))
 #richiedeva però troppo tempo
- 
-# ord 3 ind 2 (quadratico)
-dati7 <- read_rdump("modello48_spline_quad.R")
-modello_spline <- stan("recurrent_spline1.stan", data=dati7, seed=134889, chains=2, iter=30000 , warmup=15000, thin=2, verbose = TRUE)
-         
 
