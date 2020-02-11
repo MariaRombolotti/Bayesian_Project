@@ -19,6 +19,8 @@ I file .stan sono quelli usati per le simulazioni:
 
 I file modello48.R, modello48_bida.R, ... sono quelli contenenti i parametri da passare a Stan.
 
-Nel file generation_of_models.R sono stati generate i modelli.
+In generation of models abbiamo compilato via Stan tutti i nostri modelli.
 
 In model_choice.R sono contenuti gli indici WAIC per la scelta della prior.
+
+In analysis_bida_AR_model abbiamo fatto analisi dei modelli che abbiamo ottenuto.
